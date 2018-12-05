@@ -1,5 +1,4 @@
 <?php 
-// include("userAuthenticate.php");
 $title = "Members area" ;
 include("templates/head.php");
 

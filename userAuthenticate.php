@@ -1,7 +1,10 @@
 <?php 
+if(!isset($_SESSION)){ 
+    session_start(); 
+}
+
 if(isset($_SESSION['username']) || isset($_SESSION['success'])) {
-    header('location:home.php');
-  } else {
-    header('location:login.php');
+    header('Location: home.php');
+    exit();
   }
 ?>
