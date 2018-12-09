@@ -1,7 +1,6 @@
 <?php
 // Begin the PHP session so we have a place to store the username
 session_start();
-include("userAuthenticate.php");
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'firstproject');

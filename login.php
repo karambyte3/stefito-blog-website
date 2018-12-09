@@ -1,5 +1,5 @@
 <?php 
-// include("userAuthenticate.php");
+include("userAuthenticate.php");
 $title = "Login"; 
 include("templates/head.php");
 include("validateLogin.php");

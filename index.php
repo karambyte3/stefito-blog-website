@@ -1,5 +1,4 @@
 <?php 
-// include("userAuthenticate.php");
 $title = "index";
 include("templates/head.php");
 
