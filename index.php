@@ -1,6 +1,7 @@
 <?php 
 $title = "index";
 include("templates/head.php");
+include("userAuthenticate.php");
 
 ?>
     

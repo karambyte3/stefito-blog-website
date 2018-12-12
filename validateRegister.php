@@ -1,4 +1,7 @@
 <?php 
+include("userAuthenticate.php");
+
+
 // initializing variables
 $username = "";
 $email    = "";

@@ -1,4 +1,5 @@
 <?php 
+include("userAuthenticate.php");
 // LOGIN USER
 $errors = array();
 

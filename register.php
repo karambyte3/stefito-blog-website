@@ -1,5 +1,4 @@
 <?php 
-include("userAuthenticate.php");
 $title = "Regsiter"; 
 include("templates/head.php");
 include("validateRegister.php");

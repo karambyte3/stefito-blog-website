@@ -1,14 +1,11 @@
 <?php
-// Begin the PHP session so we have a place to store the username
-session_start();
+// Begin the PHP session
+if(!isset($_SESSION)){ 
+  session_start(); 
+}
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'firstproject');
-
-if(http_response_code('404') === true) {
-include('404.php'); // provide your own HTML for the error page
-die();
-}
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +33,15 @@ die();
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      <?php 
+      if(!isset($_SESSION['username'])){ 
+        echo '<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>';
+      } else {
+        echo '<a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>';
+      }
+      
+      ?>
+        
       </li>
       <li class="nav-item">
       <?php 
