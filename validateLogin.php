@@ -1,5 +1,10 @@
 <?php 
-include("userAuthenticate.php");
+// If user is logged redirect him to home.php
+if(isset($_SESSION['username']) || isset($_SESSION['success'])) {
+    header('Location: home.php');
+    exit();
+  }
+
 // LOGIN USER
 $errors = array();
 

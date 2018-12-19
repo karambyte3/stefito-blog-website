@@ -11,14 +11,15 @@ $db = mysqli_connect('localhost', 'root', '', 'firstproject');
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo $title ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><?php echo $title ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
 </head>
@@ -59,12 +60,26 @@ $db = mysqli_connect('localhost', 'root', '', 'firstproject');
       </li>
     </ul>
   </div>
-  <li>
+  <li class="profile-btn">
     <?php 
     if(isset($_SESSION['username'])){ 
-      echo '<a class="nav-link" href="logout.php" name="logout" style="float: right; color: rgba(255, 255, 255, 0.5);">Logout</a>';
+      // echo '<a class="nav-link" href="profile.php" name="profile" style="float: right; color: rgba(255, 255, 255, 0.8); a:hover{color: rgba(255, 255, 255, 1)}">Profile</a>';
+      echo '<div class="dropdown">
+  <a class="btn dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      '.$_SESSION['username'].' 
+  </a>
+
+  <div class="dropdown-menu a" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="profile.php">My Profile</a>
+    <a class="dropdown-item" href="#">Profile Settings</a>
+    <a class="dropdown-item" href="#">Write article</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="logout.php" name="logout" style="float: right;">Logout</a>
+  </div>
+</div>';    
     }?>
   </li>
+
 </nav>
 
 </div>
