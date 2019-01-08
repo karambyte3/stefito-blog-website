@@ -3,6 +3,13 @@
     box-shadow: none !important;
 }
 
+.form-control:focus, .form-control:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
 .alert {
     width: 500px;
     text-align: center;

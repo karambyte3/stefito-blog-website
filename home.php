@@ -3,14 +3,9 @@
 $title = "Members area" ;
 include("templates/head.php");
 include("functions.php");
-
 // If user is not logged redirect him to login.php
 auth();
 
-// if($_SESSION['username'] == null) {
-//     header('Location: login.php');
-//     exit();
-//   } 
 ?>
 
 

@@ -27,7 +27,7 @@ if (isset($_POST['reg_user'])) {
   if (preg_match('/^[\.A-z0-9_\-\+]+[@][A-z0-9_\-]+/', $email) == false) { array_push($errors, "Invalid email"); }
 
   if (empty($password_1)) { array_push($errors, "Password is required"); }
-  if (strlen($password_1) < 6) { array_push($errors, "Invalid password"); }
+  if (strlen($password_1) < 5) { array_push($errors, "Invalid password"); }
   if ($password_1 != $password2) {
 	array_push($errors, "The two passwords do not match");
   }

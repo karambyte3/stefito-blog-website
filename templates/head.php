@@ -71,13 +71,13 @@ $db = mysqli_connect('localhost', 'root', '', 'firstproject');
 
   <div class="dropdown-menu a" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="profile.php">My Profile</a>
-    <a class="dropdown-item" href="#">Profile Settings</a>
-    <a class="dropdown-item" href="#">Write article</a>
-    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="createArticle.php">Write article</a>';
+    if($_SESSION["username"] == "admin"){ echo '<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Approve Articles</a>';}
+    echo '<div class="dropdown-divider"></div>
     <a class="dropdown-item" href="logout.php" name="logout" style="float: right;">Logout</a>
   </div>
 </div>';    
-    }?>
+    } ?>
   </li>
 
 </nav>
